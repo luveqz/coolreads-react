@@ -20,5 +20,15 @@ module.exports = {
       white: '#FFFFFF',
       yellow: '#F8BA1A',
     },
+
+    boxShadow: {
+      card: '-2px 2px 0px rgba(0, 0, 0, 0.1)',
+    },
+
+    extend: {
+      maxWidth: {
+        'content-container': '820px',
+      },
+    },
   },
 }

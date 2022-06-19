@@ -1,7 +1,12 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next'
 
-const Home: NextPage = () => {
-  return <div className="bg-gray-500 p-4 text-white">Hello, Friend.</div>;
-};
+const Profile: NextPage = () => {
+  return (
+    <div className="mx-auto max-w-content-container px-5">
+      <main>Entries</main>
+      <aside>Secondary</aside>
+    </div>
+  )
+}
 
-export default Home;
+export default Profile
