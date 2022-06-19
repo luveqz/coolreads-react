@@ -12,6 +12,7 @@
           "screen"
         ]
       }
-    ]
+    ],
+    "comment-whitespace-inside": "never"
   }
 }
