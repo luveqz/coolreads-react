@@ -18,3 +18,18 @@ body {
 
   @apply bg-gray-500 text-white;
 }
+
+/*-------------------------------------
+  Button
+-------------------------------------*/
+.primary-btn {
+  @apply bg-yellow text-gray-600;
+}
+
+.secondary-btn {
+  @apply bg-white text-gray-600;
+}
+
+.tertiary-btn {
+  @apply border-2 border-white;
+}
