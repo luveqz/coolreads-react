@@ -12,7 +12,7 @@ const BaseAvatar = ({ src, variant }: Props) => {
 
   return (
     <div
-      className={`${size[variant]} h- overflow-hidden rounded-full bg-gray-500`}
+      className={`${size[variant]} shrink-0 overflow-hidden rounded-full bg-gray-500`}
     >
       <img src={src} alt=" avatar" className="h-full w-full object-cover" />
     </div>
