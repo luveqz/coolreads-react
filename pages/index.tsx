@@ -1,4 +1,5 @@
 import ProfileInfo from '@/components/ProfileInfo'
+import LeaderBoard from '@/components/widgets/LeaderBoard'
 import type { NextPage } from 'next'
 
 const Profile: NextPage = () => {
@@ -8,7 +9,9 @@ const Profile: NextPage = () => {
         <ProfileInfo />
       </main>
 
-      <aside className="md:w-4/12"></aside>
+      <aside className="md:w-4/12">
+        <LeaderBoard />
+      </aside>
     </div>
   )
 }

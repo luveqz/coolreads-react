@@ -6,7 +6,7 @@ type Props = {
 const BaseAvatar = ({ src, variant }: Props) => {
   const size = {
     small: 'h-7 w-7',
-    medium: 'h-8 w-8',
+    medium: 'h-[34px] w-[34px]',
     large: 'h-20 w-20',
   }
 
