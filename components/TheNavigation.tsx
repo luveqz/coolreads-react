@@ -20,7 +20,7 @@ const TheNavigation = ({ className }: Props) => {
         </BaseLink>
 
         <div className="max-w-[150px]">
-          <BaseInput placeholder="Search books..." />
+          <BaseInput placeholder="Find books..." />
         </div>
 
         <div className="flex items-center gap-x-10">
