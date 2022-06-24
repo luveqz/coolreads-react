@@ -4,7 +4,7 @@ import BaseButton from '@/components/common/BaseButton'
 const avatarUrl =
   'https://firebasestorage.googleapis.com/v0/b/fictolab.appspot.com/o/coolreads%2Fhaylee.webp?alt=media'
 
-const ProfileInfo = () => {
+const ProfileHeader = () => {
   return (
     <section className="mb-9 flex flex-col items-center gap-x-5 md:mb-16 md:flex-row md:items-start">
       <BaseAvatar src={avatarUrl} variant="large" />
@@ -35,4 +35,4 @@ const ProfileInfo = () => {
   )
 }
 
-export default ProfileInfo
+export default ProfileHeader
