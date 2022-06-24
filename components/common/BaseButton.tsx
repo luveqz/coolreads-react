@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-type Props = {
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode
   variant: 'primary' | 'secondary' | 'tertiary'
 }
