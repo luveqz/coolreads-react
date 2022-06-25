@@ -23,6 +23,10 @@ hr {
   border: none;
 }
 
+a {
+  @apply decoration-1 underline-offset-2;
+}
+
 /*-------------------------------------
   SCROLL BAR
 -------------------------------------*/
