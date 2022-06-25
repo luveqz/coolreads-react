@@ -22,7 +22,7 @@ const Profile: NextPage = () => {
         </section>
       </main>
 
-      <aside className="md:w-4/12">
+      <aside className="hidden md:block md:w-4/12">
         <LeaderBoard />
       </aside>
     </div>
