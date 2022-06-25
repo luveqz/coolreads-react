@@ -1,9 +1,9 @@
 import BaseButton from '@/components/common/BaseButton'
 import LikeButton from '@/components/common/LikeButton'
 import BaseAvatar from '@/components/common/BaseAvatar'
+import BaseRating from '@/components/common/BaseRating'
 import BaseCover from '@/components/common/BaseCover'
 import ReviewIcon from '@/assets/icons/review.svg'
-import StarIcon from '@/assets/icons/star.svg'
 
 type Props = {
   user: {
@@ -43,10 +43,7 @@ const ReviewEntry = ({ user, book, review, meta }: Props) => {
               <span className="font-bold">{user.fullName}</span> rated a book
             </p>
 
-            <p className="flex items-end gap-x-0.5">
-              <StarIcon className="text-yellow" />
-              {review.rating}
-            </p>
+            <BaseRating value={review.rating} />
           </div>
 
           <time className="flex items-end text-gray-300">
@@ -88,10 +85,9 @@ const ReviewEntry = ({ user, book, review, meta }: Props) => {
                       {book.authors.map((author) => author).join(', ')}
                     </span>
                   </p>
-                  <p className="flex items-center gap-x-0.5 md:hidden">
-                    <StarIcon className="text-yellow" />
-                    {review.rating}
-                  </p>
+                  <div className="md:hidden">
+                    <BaseRating value={review.rating} />
+                  </div>
                 </div>
               </div>
               <p className="mt-2 leading-5 line-clamp-[8]">{review.comment}</p>{' '}
