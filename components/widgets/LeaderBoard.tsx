@@ -3,7 +3,7 @@ import BaseBadge from '@/components/common/BaseBadge'
 import BaseButton from '@/components/common/BaseButton'
 import BaseInput from '@/components/common/BaseInput'
 import BaseLink from '@/components/common/BaseLink'
-import { leaderboard } from '@/data'
+import { leaderboard } from '@/data/leaderboard'
 
 const LeaderBoard = () => {
   return (
@@ -21,7 +21,7 @@ const LeaderBoard = () => {
 
               <div className="grow">
                 <p className="font-bold leading-none line-clamp-1">
-                  {user.full_name}
+                  {user.fullName}
                 </p>
                 <p className="mt-0.5 block w-fit leading-none text-gray-200">
                   @{user.username}
