@@ -2,9 +2,9 @@ import BaseTab from '@/components/common/BaseTab'
 
 const ActivityTabs = () => {
   return (
-    <div className="h-16 w-[calc(100%_+_1.25rem)] overflow-hidden md:mb-2">
+    <div className="relative -left-5 h-16 w-[calc(100%_+_2.5rem)] overflow-hidden md:mb-2">
       <div className="box-content h-full overflow-x-auto pb-4">
-        <nav className="relative flex min-w-fit justify-between gap-x-8 pr-5 text-xl font-semibold">
+        <nav className="relative flex min-w-fit justify-between gap-x-8 px-5 text-xl font-semibold">
           <BaseTab label="Recent Activity" isActive />
           <BaseTab label="Reviews" counter={4} />
           <BaseTab label="Quotes" counter={13} />
@@ -15,7 +15,7 @@ const ActivityTabs = () => {
             <BaseTab label="More" counter={2} />
           </div>
 
-          <hr className="absolute bottom-0 left-0 -z-10 h-1 w-[calc(100%_-_1.25rem)] bg-gray-600" />
+          <hr className="absolute bottom-0 left-5 -z-10 h-1 w-[calc(100%_-_2.5rem)] bg-gray-600" />
         </nav>
       </div>
     </div>
