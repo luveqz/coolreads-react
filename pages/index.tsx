@@ -1,8 +1,9 @@
 import ActivityTabs from '@/components/ActivityTabs'
 import ProfileHeader from '@/components/ProfileHeader'
 import ReviewEntry from '@/components/entries/ReviewEntry'
+import QuoteEntry from '@/components/entries/QuoteEntry'
 import LeaderBoard from '@/components/widgets/LeaderBoard'
-import { review } from '@/data/recent-activity'
+import { review, quote } from '@/data/recent-activity'
 import type { NextPage } from 'next'
 
 const Profile: NextPage = () => {
@@ -18,6 +19,12 @@ const Profile: NextPage = () => {
             book={review.book}
             review={review.review}
             meta={review.meta}
+          />
+          <QuoteEntry
+            user={quote.user}
+            book={quote.book}
+            quote={quote.quote}
+            meta={quote.meta}
           />
         </section>
       </main>

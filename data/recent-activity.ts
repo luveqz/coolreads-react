@@ -19,3 +19,18 @@ export const review = {
     likes: 108,
   },
 }
+
+export const quote = {
+  user,
+  book: {
+    title: 'Last Evening on Earth',
+    authors: ['Roberto Bolaño'],
+  },
+  quote:
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ad illo porro iste dolor reprehenderit laboriosam nihil blanditiis in quasi! Atque tempora deleniti delectus recusandae ex, dolorem voluptatum dolores eius, itaque laboriosam maxime explicabo quis accusantium. Dolores consequatur voluptatum cumque. Atque tempora deleniti delectus recusandae ex, dolorem voluptatum dolores eius, itaque laboriosam maxime explicabo quis accusantium.',
+  meta: {
+    publishedAt: '15m',
+    comments: ['Lorem', 'Lorem'],
+    likes: 3,
+  },
+}
