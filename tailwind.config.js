@@ -26,6 +26,12 @@ module.exports = {
     },
 
     extend: {
+      height: {
+        cover: '75px',
+      },
+      width: {
+        cover: '50px',
+      },
       maxWidth: {
         'content-container': '820px',
       },
