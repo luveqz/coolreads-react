@@ -1,5 +1,5 @@
-import BaseButton from '@/components/common/BaseButton'
-import LikeButton from '@/components/common/LikeButton'
+import EntryHeader from '@/components/common/EntryHeader'
+import EntryFooter from '@/components/common/EntryFooter'
 import BaseAvatar from '@/components/common/BaseAvatar'
 import BaseRating from '@/components/common/BaseRating'
 import BaseCover from '@/components/common/BaseCover'
@@ -37,19 +37,12 @@ const ReviewEntry = ({ user, book, review, meta }: Props) => {
 
       <div className="grow">
         {/* Header (Desktop) */}
-        <header className="mb-2 flex justify-end leading-none md:justify-between">
-          <div className="hidden items-end gap-x-3 md:flex">
-            <p>
-              <span className="font-bold">{user.fullName}</span> rated a book
-            </p>
-
-            <BaseRating value={review.rating} />
-          </div>
-
-          <time className="flex items-end text-gray-300">
-            {meta.publishedAt}
-          </time>
-        </header>
+        <EntryHeader publishedAt={meta.publishedAt}>
+          <p>
+            <span className="font-bold">{user.fullName}</span> rated a book
+          </p>
+          <BaseRating value={review.rating} />
+        </EntryHeader>
 
         {/* Card */}
         <section className="rounded bg-gray-400 py-4 px-5">
@@ -66,9 +59,9 @@ const ReviewEntry = ({ user, book, review, meta }: Props) => {
                   <p className="font-bold">{user.fullName}</p>
                   <ReviewIcon className="text-gray-300" />
                 </div>
-
                 <hr className="mt-2 mb-4 h-0.5 bg-gray-500" />
               </div>
+
               {/* Content */}
               <div className="flex gap-x-4">
                 <div className="md:hidden">
@@ -90,29 +83,16 @@ const ReviewEntry = ({ user, book, review, meta }: Props) => {
                   </div>
                 </div>
               </div>
-              <p className="mt-2 leading-5 line-clamp-[8]">{review.comment}</p>{' '}
+              <div className="mt-2 leading-5 line-clamp-3">
+                {review.comment}
+              </div>
               <a className="underline" href="#">
                 read more
               </a>
             </div>
           </section>
 
-          {/* Meta */}
-          <section className="mt-3 flex justify-between">
-            <div className="flex items-center gap-x-1">
-              <LikeButton />
-              {meta.likes}
-            </div>
-
-            <div className="flex items-center gap-x-4">
-              <a className="underline underline-offset-2" href="#">
-                View 23 comments
-              </a>
-              <div className="hidden md:block">
-                <BaseButton variant="tertiary">Reply</BaseButton>
-              </div>
-            </div>
-          </section>
+          <EntryFooter likes={meta.likes} comments={meta.comments} />
         </section>
       </div>
     </article>
