@@ -6,6 +6,7 @@ import ListEntry from '@/components/entries/ListEntry'
 import LeaderBoard from '@/components/widgets/LeaderBoard'
 import { review, quote, list } from '@/data/recent-activity'
 import type { NextPage } from 'next'
+import TheFooter from '@/components/TheFooter'
 
 const Profile: NextPage = () => {
   return (
@@ -36,9 +37,13 @@ const Profile: NextPage = () => {
         </section>
       </main>
 
-      <aside className="hidden md:block md:w-4/12">
-        <LeaderBoard />
-      </aside>
+      <div className="hidden md:block md:w-4/12">
+        <aside>
+          <LeaderBoard />
+        </aside>
+
+        <TheFooter />
+      </div>
     </div>
   )
 }
