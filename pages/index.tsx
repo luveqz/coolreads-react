@@ -1,3 +1,4 @@
+import TheFooter from '@/components/TheFooter'
 import ActivityTabs from '@/components/ActivityTabs'
 import ProfileHeader from '@/components/ProfileHeader'
 import ReviewEntry from '@/components/entries/ReviewEntry'
@@ -6,7 +7,6 @@ import ListEntry from '@/components/entries/ListEntry'
 import LeaderBoard from '@/components/widgets/LeaderBoard'
 import { review, quote, list } from '@/data/recent-activity'
 import type { NextPage } from 'next'
-import TheFooter from '@/components/TheFooter'
 
 const Profile: NextPage = () => {
   return (
