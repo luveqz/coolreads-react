@@ -3,11 +3,21 @@ const TheFooter = () => {
     <footer className="mt-5 border-t-4 border-gray-600 pt-5 text-center">
       <p className="text-gray-100">
         Avatars adapted from{' '}
-        <a className="font-bold text-white" href="#">
+        <a
+          className="font-semibold text-white"
+          href="https://www.freepik.com/author/pikisuperstar"
+          target="_blank"
+          rel="noreferrer"
+        >
           @pikisuperstar
         </a>
         ’s illustrations. Developed by{' '}
-        <a className="font-bold text-white" href="#">
+        <a
+          className="font-semibold text-white"
+          href="https://github.com/luvejo"
+          target="_blank"
+          rel="noreferrer"
+        >
           @luvejo
         </a>
         .
