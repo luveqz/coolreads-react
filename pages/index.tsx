@@ -5,7 +5,9 @@ import ReviewEntry from '@/components/entries/ReviewEntry'
 import QuoteEntry from '@/components/entries/QuoteEntry'
 import ListEntry from '@/components/entries/ListEntry'
 import LeaderBoard from '@/components/widgets/LeaderBoard'
+import FeaturedBook from '@/components/widgets/FeaturedBook'
 import { review, quote, list } from '@/data/recent-activity'
+import { featuredBook } from '@/data/widgets'
 import type { NextPage } from 'next'
 
 const Profile: NextPage = () => {
@@ -38,8 +40,13 @@ const Profile: NextPage = () => {
       </main>
 
       <div className="hidden md:block md:w-4/12">
-        <aside>
+        <aside className="flex flex-col gap-y-10">
           <LeaderBoard />
+          <FeaturedBook
+            title="Recommended by Haylee"
+            subtitle="This week"
+            book={featuredBook}
+          />
         </aside>
 
         <TheFooter />
