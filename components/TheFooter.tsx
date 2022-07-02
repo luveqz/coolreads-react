@@ -1,6 +1,6 @@
 const TheFooter = () => {
   return (
-    <footer className="mt-10 text-center">
+    <footer className="mt-5 border-t-4 border-gray-600 pt-5 text-center">
       <p className="text-gray-100">
         Avatars adapted from{' '}
         <a className="font-bold text-white" href="#">
