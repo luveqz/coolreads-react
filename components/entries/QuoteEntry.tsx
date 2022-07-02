@@ -56,7 +56,7 @@ const QuoteEntry = ({ user, book, quote, meta }: Props) => {
             </div>
 
             <div>
-              <div className="leading-5 line-clamp-3">{quote}</div>
+              <div className="leading-5 line-clamp-5">{quote}</div>
               <a className="underline" href="#">
                 read more
               </a>

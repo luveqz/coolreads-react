@@ -11,7 +11,7 @@ export const review = {
   review: {
     rating: 4.5,
     comment:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ad illo porro iste dolor reprehenderit laboriosam nihil blanditiis in quasi! Atque tempora deleniti delectus recusandae ex, dolorem voluptatum dolores eius, itaque laboriosam maxime explicabo quis accusantium. Dolores consequatur voluptatum cumque. Atque tempora deleniti delectus recusandae ex, dolorem voluptatum dolores eius, itaque laboriosam maxime explicabo quis accusantium.',
+      '"The melancholy folklore of exile", as Roberto Bolano once put it, pervades these fourteen haunting stories. Bolano\'s narrators are usually writers grappling with private (and generally unlucky) quests, who typically speak in the first person, as if giving a deposition, like witnesses to a crime.',
   },
   meta: {
     publishedAt: '3m',
@@ -27,7 +27,7 @@ export const quote = {
     authors: ['Roberto Bolaño'],
   },
   quote:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ad illo porro iste dolor reprehenderit laboriosam nihil blanditiis in quasi! Atque tempora deleniti delectus recusandae ex, dolorem voluptatum dolores eius, itaque laboriosam maxime explicabo quis accusantium. Dolores consequatur voluptatum cumque. Atque tempora deleniti delectus recusandae ex, dolorem voluptatum dolores eius, itaque laboriosam maxime explicabo quis accusantium.',
+    'The girl replies that she was dreaming about her mother, who died not long ago. The dead are at peace, thinks B stretching out in the bed. As if she had read his mind, the girls says that no one who has passed through this world is at peace. Not anymore, not ever, she says with total conviction.',
   meta: {
     publishedAt: '5h',
     comments: ['Lorem', 'Lorem'],

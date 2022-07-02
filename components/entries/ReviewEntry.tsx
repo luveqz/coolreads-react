@@ -83,7 +83,7 @@ const ReviewEntry = ({ user, book, review, meta }: Props) => {
                   </div>
                 </div>
               </div>
-              <div className="mt-2 leading-5 line-clamp-3">
+              <div className="mt-2 leading-5 line-clamp-5">
                 {review.comment}
               </div>
               <a className="underline" href="#">
