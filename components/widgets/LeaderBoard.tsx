@@ -1,3 +1,4 @@
+import WidgetHeader from '@/components/common/WidgetHeader'
 import BaseAvatar from '@/components/common/BaseAvatar'
 import BaseBadge from '@/components/common/BaseBadge'
 import BaseButton from '@/components/common/BaseButton'
@@ -8,10 +9,7 @@ import { leaderboard } from '@/data/leaderboard'
 const LeaderBoard = () => {
   return (
     <section>
-      <header className="rounded bg-gray-600 py-3 px-6">
-        <p className="text-lg leading-7">20 Reviews Challenge</p>
-        <p className="text-base font-bold leading-5">Leaderboard</p>
-      </header>
+      <WidgetHeader title="20 Reviews Challenge" subtitle="Leaderboard" />
 
       <section className="my-4 flex flex-col gap-y-4 px-6">
         {leaderboard.map((user) => (
