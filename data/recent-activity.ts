@@ -6,7 +6,7 @@ export const review = {
     title: 'Last Evening on Earth',
     authors: ['Roberto Bolaño'],
     coverUrl:
-      'https://images-na.ssl-images-amazon.com/images/I/71Jk-53tOfL.jpg',
+      'https://firebasestorage.googleapis.com/v0/b/fictolab.appspot.com/o/coolreads%2Fcovers%2Fleoe.webp?alt=media',
   },
   review: {
     rating: 4.5,
@@ -43,35 +43,35 @@ export const list = {
       title: 'Last Evening on Earth',
       authors: ['Roberto Bolaño'],
       coverUrl:
-        'https://images-na.ssl-images-amazon.com/images/I/71Jk-53tOfL.jpg',
+        'https://firebasestorage.googleapis.com/v0/b/fictolab.appspot.com/o/coolreads%2Fcovers%2Fleoe.webp?alt=media',
     },
     {
       id: 2,
       title: 'Crónica del pájaro que da cuerda al mundo',
       authors: ['Haruki Murakami'],
       coverUrl:
-        'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348296785l/3392482.jpg',
+        'https://firebasestorage.googleapis.com/v0/b/fictolab.appspot.com/o/coolreads%2Fcovers%2Fcdpqdcam.webp?alt=media',
     },
     {
       id: 3,
       title: 'A Confederacy of Dunces',
       authors: ['John Kennedy Toole'],
       coverUrl:
-        'https://www.penguin.co.uk/content/dam/prh/books/570/57049/9780141182865.jpg.transform/PRHDesktopWide_small/image.jpg',
+        'https://firebasestorage.googleapis.com/v0/b/fictolab.appspot.com/o/coolreads%2Fcovers%2Facod.webp?alt=media',
     },
     {
       id: 4,
       title: 'No Longer Human',
       authors: ['Osamu Dazai'],
       coverUrl:
-        'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1422638843l/194746.jpg',
+        'https://firebasestorage.googleapis.com/v0/b/fictolab.appspot.com/o/coolreads%2Fcovers%2Fnlh.webp?alt=media',
     },
     {
       id: 5,
       title: 'The Catcher in the Rye ',
       authors: ['J.D. Salinger'],
       coverUrl:
-        'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1398034300l/5107.jpg',
+        'https://firebasestorage.googleapis.com/v0/b/fictolab.appspot.com/o/coolreads%2Fcovers%2Ftcitr.webp?alt=media',
     },
   ],
   name: 'Anti-hero’s journey',
