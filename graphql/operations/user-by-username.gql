@@ -1,0 +1,10 @@
+query getUserByUsername($username: String!) {
+  user(username: $username) {
+    id
+    firstName
+    lastName
+    username
+    bio
+    avatarUrl
+  }
+}

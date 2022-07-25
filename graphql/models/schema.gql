@@ -1,0 +1,14 @@
+type User {
+  id: ID
+  username: String
+  bio: String
+  firstName: String
+  lastName: String
+  avatarUrl: String
+  email: String
+  password: String
+}
+
+type Query {
+  user(username: String!): User
+}

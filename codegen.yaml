@@ -1,0 +1,8 @@
+schema: ./graphql/models/*.gql
+documents: ./graphql/operations/**/*.gql
+generates:
+  ./.output/graphql.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request
