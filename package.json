@@ -17,6 +17,7 @@
     "*.**": "prettier --check --ignore-unknown"
   },
   "dependencies": {
+    "@prisma/client": "^4.1.0",
     "apollo-server-micro": "^3.10.0",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
@@ -51,6 +52,7 @@
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.11",
+    "prisma": "^4.1.0",
     "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^26.0.0",
