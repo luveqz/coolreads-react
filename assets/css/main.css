@@ -14,7 +14,7 @@
   General
 -------------------------------------*/
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', Georgia, 'Times New Roman', Times, serif;
   overflow: overlay;
   @apply bg-gray-500 text-white;
 }
