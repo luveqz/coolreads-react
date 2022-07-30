@@ -22,16 +22,14 @@ const BaseImage = ({ src, alt, className = '' }: Props) => {
   useEffect(() => imageRefCallback(imageEl), [])
 
   return (
-    typeof window && (
-      <img
-        src={src}
-        ref={imageEl}
-        alt={alt}
-        className={`${opacity} h-full w-full ${className} object-cover`}
-        onError={() => setOpacity('opacity-0')}
-        onLoad={() => setOpacity('opacity-100')}
-      />
-    )
+    <img
+      src={src}
+      ref={imageEl}
+      alt={alt}
+      className={`${opacity} h-full w-full ${className} object-cover`}
+      onError={() => setOpacity('opacity-0')}
+      onLoad={() => setOpacity('opacity-100')}
+    />
   )
 }
 
