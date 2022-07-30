@@ -12,8 +12,8 @@ import type { NextPage } from 'next'
 
 const Profile: NextPage = () => {
   return (
-    <div className="mx-auto mt-9 max-w-content-container gap-x-10 px-5 md:flex">
-      <main className="pb-11 md:w-8/12">
+    <div className="mx-auto mt-9 max-w-content-container grid-cols-main gap-x-10 px-5 md:grid">
+      <main className="pb-11">
         <ProfileHeader />
         <ActivityTabs />
 
@@ -39,7 +39,7 @@ const Profile: NextPage = () => {
         </section>
       </main>
 
-      <div className="hidden md:block md:w-4/12">
+      <div className="hidden md:block">
         <aside className="flex flex-col gap-y-10">
           <LeaderBoard />
           <FeaturedBook

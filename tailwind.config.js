@@ -35,6 +35,9 @@ module.exports = {
       maxWidth: {
         'content-container': '820px',
       },
+      gridTemplateColumns: {
+        main: 'calc(68% - 20px) calc(32% - 20px)',
+      },
     },
   },
 
