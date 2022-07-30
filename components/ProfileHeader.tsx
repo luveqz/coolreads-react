@@ -9,10 +9,10 @@ const ProfileHeader = () => {
     <section className="mb-9 flex flex-col items-center gap-x-5 md:mb-16 md:flex-row md:items-start">
       <BaseAvatar src={avatarUrl} variant="large" />
 
-      <div className="flex grow flex-wrap text-center md:text-left">
+      <div className="flex grow flex-wrap items-start text-center md:text-left">
         {/* User Info */}
-        <div className="my-2 grow md:order-1">
-          <h1 className="text-2xl font-semibold md:text-3xl ">
+        <div className="my-2 grow md:order-1 md:mt-0">
+          <h1 className="text-2xl font-semibold md:mb-0.5 md:text-3xl md:leading-none ">
             Haylee Caulfield
           </h1>
           <p className="text-lg leading-5 text-gray-200">@goldenfish</p>
@@ -27,7 +27,7 @@ const ProfileHeader = () => {
         </div>
 
         {/* Action */}
-        <div className="mt-4 flex shrink-0 basis-full items-start justify-center md:order-2 md:basis-auto">
+        <div className="mt-4 flex shrink-0 basis-full items-start justify-center md:order-2 md:mt-0 md:basis-auto">
           <BaseButton variant="tertiary">Follow</BaseButton>
         </div>
       </div>
