@@ -3,9 +3,10 @@ import { useEffect, useState } from 'react'
 type Props = {
   src: string
   alt: string
+  className?: string
 }
 
-const BaseImage = ({ src, alt }: Props) => {
+const BaseImage = ({ src, alt, className = '' }: Props) => {
   const [opacity, setOpacity] = useState('opacity-0')
   let imageEl: HTMLImageElement | null = null
 
@@ -26,7 +27,7 @@ const BaseImage = ({ src, alt }: Props) => {
         src={src}
         ref={imageEl}
         alt={alt}
-        className={`${opacity} h-full w-full object-cover`}
+        className={`${opacity} h-full w-full ${className} object-cover`}
         onError={() => setOpacity('opacity-0')}
         onLoad={() => setOpacity('opacity-100')}
       />

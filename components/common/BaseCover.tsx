@@ -8,10 +8,14 @@ type Props = {
 const BaseCover = ({ src, title }: Props) => {
   return (
     <div
-      className="h-cover w-cover shrink-0 rounded border-2 border-white bg-gray-600"
+      className="h-cover w-cover shrink-0 overflow-hidden rounded bg-gray-600"
       title={title}
     >
-      <BaseImage src={src} alt={` Cover of "${title}"`} />
+      <BaseImage
+        src={src}
+        alt={` Cover of "${title}"`}
+        className="rounded border-2 border-white"
+      />
     </div>
   )
 }
