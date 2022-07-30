@@ -1,3 +1,5 @@
+import BaseImage from '@/components/common/BaseImage'
+
 type Props = {
   variant: 'small' | 'medium' | 'large'
   src: string
@@ -14,7 +16,7 @@ const BaseAvatar = ({ src, variant }: Props) => {
     <div
       className={`${size[variant]} shrink-0 overflow-hidden rounded-full bg-gray-600`}
     >
-      <img src={src} alt=" avatar" className="h-full w-full object-cover" />
+      <BaseImage src={src} alt=" Avatar" />
     </div>
   )
 }

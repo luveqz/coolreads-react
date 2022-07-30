@@ -1,3 +1,5 @@
+import BaseImage from '@/components/common/BaseImage'
+
 type Props = {
   src: string
   title: string
@@ -6,14 +8,10 @@ type Props = {
 const BaseCover = ({ src, title }: Props) => {
   return (
     <div
-      className="h-cover w-cover shrink-0 rounded border-2 border-white bg-white"
+      className="h-cover w-cover shrink-0 rounded border-2 border-white bg-gray-600"
       title={title}
     >
-      <img
-        src={src}
-        alt={` Cover of "${title}"`}
-        className="h-full w-full object-cover"
-      />
+      <BaseImage src={src} alt={` Cover of "${title}"`} />
     </div>
   )
 }
