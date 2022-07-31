@@ -14,7 +14,7 @@ model User {
   username             String              @db.VarChar(40)
   firstName            String              @db.VarChar(255)
   lastName             String              @db.VarChar(255)
-  bio                  String              @db.VarChar(400)
+  bio                  String?             @db.VarChar(400)
   avatarUrl            String              @db.VarChar(255)
   email                String              @db.VarChar(255)
   password             String              @db.VarChar(255)
@@ -26,8 +26,8 @@ model User {
   activity             Notification[]      @relation(name: "actor")
   notifications        Notification[]      @relation(name: "target")
   featuredBookWidget   FeaturedBookWidget? @relation(fields: [featuredBookWidgetId], references: [id])
+  featuredBookWidgetId Int?
   challengeScores      UserScore[]
-  featuredBookWidgetId Int
   createdAt            DateTime            @default(now())
   updatedAt            DateTime            @updatedAt
 }
@@ -66,6 +66,7 @@ model SocialMeta {
 model Review {
   id           Int        @id @default(autoincrement())
   content      String     @db.VarChar(2000)
+  rating       Float
   user         User       @relation(fields: [userId], references: [id])
   userId       Int
   book         Book       @relation(fields: [bookId], references: [id])
@@ -80,7 +81,7 @@ model Book {
   id                  Int                  @id @default(autoincrement())
   slug                String               @db.VarChar(255)
   title               String               @db.VarChar(255)
-  description         String               @db.VarChar(1200)
+  description         String               @db.VarChar(3000)
   coverUrl            String               @db.VarChar(400)
   authors             Author[]
   reviews             Review[]
