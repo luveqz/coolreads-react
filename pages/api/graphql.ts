@@ -2,8 +2,8 @@ import type { IncomingMessage, ServerResponse } from 'http'
 import { ApolloServer } from 'apollo-server-micro'
 import Cors from 'micro-cors'
 
-import models from '@/graphql/models/schema.gql'
-import resolvers from '@/graphql/resolvers'
+import models from '@/database/graphql/models/schema.gql'
+import resolvers from '@/database/graphql/resolvers'
 
 const cors = Cors({
   origin: process.env.CORS_ALLOWED_ORIGIN,

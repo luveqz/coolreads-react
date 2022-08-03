@@ -4,7 +4,7 @@ import BaseBadge from '@/components/common/BaseBadge'
 import BaseButton from '@/components/common/BaseButton'
 import BaseInput from '@/components/common/BaseInput'
 import BaseLink from '@/components/common/BaseLink'
-import { leaderboard } from '@/data/leaderboard'
+import { leaderboard } from '@/database/fixtures/leaderboard'
 
 const LeaderBoard = () => {
   return (

@@ -16,6 +16,9 @@
     "*.{css,scss,sass,html}": "stylelint",
     "*.**": "prettier --check --ignore-unknown"
   },
+  "prisma": {
+    "schema": "db/schema.prisma"
+  },
   "dependencies": {
     "@prisma/client": "^4.1.0",
     "apollo-server-micro": "^3.10.0",

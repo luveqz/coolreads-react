@@ -6,8 +6,8 @@ import QuoteEntry from '@/components/entries/QuoteEntry'
 import ListEntry from '@/components/entries/ListEntry'
 import LeaderBoard from '@/components/widgets/LeaderBoard'
 import FeaturedBook from '@/components/widgets/FeaturedBook'
-import { review, quote, list } from '@/data/recent-activity'
-import { featuredBook } from '@/data/widgets'
+import { review, quote, list } from '@/database/fixtures/recent-activity'
+import { featuredBook } from '@/database/fixtures/widgets'
 import type { NextPage } from 'next'
 
 const Profile: NextPage = () => {

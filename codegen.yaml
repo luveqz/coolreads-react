@@ -1,5 +1,5 @@
-schema: ./graphql/models/*.gql
-documents: ./graphql/operations/**/*.gql
+schema: ./database/graphql/models/*.gql
+documents: ./database/graphql/operations/**/*.gql
 generates:
   ./.output/graphql.ts:
     plugins:
