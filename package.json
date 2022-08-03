@@ -17,7 +17,7 @@
     "*.**": "prettier --check --ignore-unknown"
   },
   "prisma": {
-    "schema": "db/schema.prisma"
+    "schema": "database/schema.prisma"
   },
   "dependencies": {
     "@prisma/client": "^4.1.0",
