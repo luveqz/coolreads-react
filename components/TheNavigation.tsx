@@ -3,15 +3,15 @@ import BaseInput from '@/components/common/BaseInput'
 import BaseLink from '@/components/common/BaseLink'
 import BaseAvatar from '@/components/common/BaseAvatar'
 import LogoIcon from '@/assets/icons/logo.svg'
+import { useAuth } from '@/lib/auth'
 
 type Props = {
   className?: string
 }
 
-const avatarUrl =
-  'https://firebasestorage.googleapis.com/v0/b/fictolab.appspot.com/o/coolreads%2Fhaylee.webp?alt=media'
-
 const TheNavigation = ({ className }: Props) => {
+  const user = useAuth()
+
   return (
     <section className={`${className} bg-gray-400 py-2 text-white shadow-card`}>
       <div className="mx-auto flex w-full max-w-content-container items-center justify-between px-5 ">
@@ -32,7 +32,7 @@ const TheNavigation = ({ className }: Props) => {
           <div className="flex gap-x-4">
             <NotificationButton />
 
-            <BaseAvatar src={avatarUrl} variant="small" />
+            <BaseAvatar src={user?.avatarUrl || ''} variant="small" />
           </div>
         </div>
       </div>
