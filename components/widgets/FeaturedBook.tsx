@@ -1,5 +1,6 @@
 import WidgetHeader from '@/components/common/WidgetHeader'
 import BaseCover from '@/components/common/BaseCover'
+import { getFormattedAuthors } from '@/lib/utils/string'
 
 type Props = {
   title: string
@@ -24,7 +25,7 @@ const FeaturedBook = ({ title, subtitle, book }: Props) => {
         <div className="w-full">
           <p className="text-center text-lg leading-none">{book.title}</p>
           <p className="text-center italic">
-            By {book.authors[0]} {book.authors.length > 1 && 'et al.'}
+            By {getFormattedAuthors(book.authors)}
           </p>
 
           <div className="mt-4 leading-5 line-clamp-4">{book.summary}</div>
