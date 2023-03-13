@@ -11,9 +11,15 @@ type Props = {
 }
 
 const AuthProvider = ({ children }: Props) => {
-  const { data } = useQuery(['user'], () =>
-    getUserByUsername({ username: 'goldenfish' }),
+  const { data } = useQuery(
+    ['user'],
+    () => getUserByUsername({ username: 'goldenfish' }),
+    {
+      cacheTime: Infinity,
+      refetchOnWindowFocus: false,
+    },
   )
+
   let user
   if (data?.user) user = data.user
   return <AuthContext.Provider value={user}>{children}</AuthContext.Provider>
