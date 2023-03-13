@@ -14,9 +14,11 @@ const BaseAvatar = ({ src, variant }: Props) => {
 
   return (
     <div
-      className={`${size[variant]} shrink-0 overflow-hidden rounded-full bg-gray-600`}
+      className={`${size[variant]} relative shrink-0 overflow-hidden rounded-full bg-gray-600`}
     >
       <BaseImage src={src} alt=" Avatar" />
+
+      <div className="absolute top-0 h-full w-full rounded-full border-2 border-gray-600/10" />
     </div>
   )
 }
