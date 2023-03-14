@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     colors: {
       gray: {
+        50: '#D5D3D8',
         100: '#B9B6BD',
         200: '#908A8F',
         300: '#817E8C',
@@ -19,6 +20,7 @@ module.exports = {
       },
       white: '#FFFFFF',
       yellow: '#F8BA1A',
+      transparent: 'transparent',
     },
 
     boxShadow: {
