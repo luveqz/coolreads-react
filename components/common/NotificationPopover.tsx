@@ -2,6 +2,7 @@ import { Popover, Transition } from '@headlessui/react'
 import { ReactNode, useState } from 'react'
 import { usePopper } from 'react-popper'
 
+import { usePopperPopover } from '@/lib/hooks/popper'
 import NotificationItem from '@/components/common/NotificationItem'
 import { leaderboard } from '@/database/fixtures/leaderboard'
 
@@ -10,21 +11,13 @@ type Props = {
 }
 
 const NotificationPopover = ({ children }: Props) => {
-  const [referenceElement, setReferenceElement] = useState(null)
-  const [popperElement, setPopperElement] = useState(null)
-  const [arrowElement, setArrowElement] = useState(null)
-  const { styles, attributes } = usePopper(referenceElement, popperElement, {
-    placement: 'top-end',
-    modifiers: [
-      { name: 'arrow', options: { element: arrowElement, padding: 20 } },
-      {
-        name: 'offset',
-        options: {
-          offset: [16, 8],
-        },
-      },
-    ],
-  })
+  const {
+    setReferenceElement,
+    setPopperElement,
+    setArrowElement,
+    styles,
+    attributes,
+  } = usePopperPopover()
 
   return (
     <Popover className="relative">
