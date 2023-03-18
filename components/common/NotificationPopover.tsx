@@ -1,16 +1,21 @@
 import { Popover, Transition } from '@headlessui/react'
-import { ReactNode, useState } from 'react'
-import { usePopper } from 'react-popper'
+import { ReactNode } from 'react'
 
+import { Notification } from '@/lib/models/system'
 import { usePopperPopover } from '@/lib/hooks/popper'
 import NotificationItem from '@/components/common/NotificationItem'
-import { leaderboard } from '@/database/fixtures/leaderboard'
 
 type Props = {
   children: ReactNode | ReactNode[]
+  notifications: Notification[]
+  onMarkAsRead: (id: string) => void
 }
 
-const NotificationPopover = ({ children }: Props) => {
+const NotificationPopover = ({
+  children,
+  notifications,
+  onMarkAsRead,
+}: Props) => {
   const {
     setReferenceElement,
     setPopperElement,
@@ -47,18 +52,17 @@ const NotificationPopover = ({ children }: Props) => {
                 </header>
 
                 <section className="flex flex-col gap-3 rounded-b bg-gray-50 px-4 py-2">
-                  <NotificationItem
-                    avatarUrl={leaderboard[1].avatarUrl}
-                    action="commented on your post"
-                    timestamp="48m ago"
-                  />
-
-                  <NotificationItem
-                    avatarUrl={leaderboard[2].avatarUrl}
-                    action="Felipe Caulfield starred your book list"
-                    timestamp="1h ago"
-                    isRead
-                  />
+                  {notifications.map((notification) => (
+                    <NotificationItem
+                      key={notification.id}
+                      id={notification.id}
+                      subject={notification.subject}
+                      predicate={notification.predicate}
+                      timestamp={notification.timestamp}
+                      isRead={notification.isRead}
+                      onClick={() => onMarkAsRead(notification.id)}
+                    />
+                  ))}
                 </section>
 
                 <div

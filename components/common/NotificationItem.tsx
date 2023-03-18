@@ -1,21 +1,32 @@
 import BaseAvatar from '@/components/common/BaseAvatar'
+import { Notification } from '@/lib/models/system'
 
-type Props = {
-  avatarUrl: string
-  action: string
-  timestamp: string
-  isRead?: boolean
+type Props = Notification & {
+  onClick: (id: string) => void
 }
 
-const NotificationItem = ({ avatarUrl, action, timestamp, isRead }: Props) => {
+const NotificationItem = ({
+  id,
+  subject,
+  predicate,
+  timestamp,
+  isRead,
+  onClick,
+}: Props) => {
+  const handleClick = () => {
+    onClick(id)
+  }
+
   return (
     <button
-      className={`${isRead ? 'opacity-50 grayscale' : ''} flex gap-2 text-left`}
+      className={`${isRead ? 'opacity-60 grayscale' : ''} flex gap-2 text-left`}
+      onClick={handleClick}
     >
-      <BaseAvatar src={avatarUrl} variant="medium" />
+      <BaseAvatar src={subject.avatarUrl || ''} variant="medium" />
 
       <p className="leading-5 text-gray-500">
-        {action} · <span className="text-gray-300">{timestamp}</span>
+        {subject.fullName} {predicate} ·{' '}
+        <span className="text-gray-300">{timestamp}</span>
       </p>
     </button>
   )
