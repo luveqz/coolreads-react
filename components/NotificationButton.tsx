@@ -12,7 +12,9 @@ const NotificationButton = () => {
     >
       <div className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gray-600">
         <BellIcon />
-        <span className="absolute top-0.5 right-0 h-[7px] w-[7px] rounded-full bg-white" />
+        {notifications.some((n) => !n.isRead) && (
+          <span className="absolute top-0.5 right-0 h-[7px] w-[7px] rounded-full bg-white" />
+        )}
       </div>
     </NotificationPopover>
   )
