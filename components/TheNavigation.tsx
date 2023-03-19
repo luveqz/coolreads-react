@@ -2,6 +2,7 @@ import NotificationButton from '@/components/NotificationButton'
 import BaseInput from '@/components/common/BaseInput'
 import BaseLink from '@/components/common/BaseLink'
 import BaseAvatar from '@/components/common/BaseAvatar'
+import BaseTooltip from '@/components/common/BaseTooltip'
 import LogoIcon from '@/assets/icons/logo.svg'
 import { useAuth } from '@/lib/auth'
 
@@ -15,9 +16,9 @@ const TheNavigation = ({ className }: Props) => {
   return (
     <section className={`${className} bg-gray-400 py-2 text-white shadow-card`}>
       <div className="mx-auto flex w-full max-w-content-container items-center justify-between px-5 ">
-        <BaseLink href="/">
+        <BaseTooltip message="This guy traded 3 neurons for this name.">
           <LogoIcon />
-        </BaseLink>
+        </BaseTooltip>
 
         <div className="max-w-[150px]">
           <BaseInput placeholder="Find books..." />

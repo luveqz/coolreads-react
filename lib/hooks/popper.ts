@@ -1,7 +1,11 @@
+import { Placement } from '@popperjs/core'
 import { useState } from 'react'
 import { usePopper } from 'react-popper'
 
-export const usePopperPopover = () => {
+export const usePopperPopover = (
+  arrowPlacement: Placement = 'top-end',
+  arrowHorizontalOffset: number = 16,
+) => {
   /*--------------------------------------------
     DOM References
   --------------------------------------------*/
@@ -18,13 +22,13 @@ export const usePopperPopover = () => {
     Popper Config
   --------------------------------------------*/
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
-    placement: 'top-end',
+    placement: arrowPlacement,
     modifiers: [
       { name: 'arrow', options: { element: arrowElement, padding: 20 } },
       {
         name: 'offset',
         options: {
-          offset: [16, 8],
+          offset: [arrowHorizontalOffset, 8],
         },
       },
     ],
